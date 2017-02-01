@@ -7,6 +7,9 @@ sudo apt-get install -qq language-pack-en
 sudo locale-gen en_US
 sudo update-locale LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
 
+echo ">>> Creating Vagrant User"
+sudo useradd -md /home/vagrant vagrant
+
 echo ">>> Installing Base Packages"
 
 if [[ -z $1 ]]; then
